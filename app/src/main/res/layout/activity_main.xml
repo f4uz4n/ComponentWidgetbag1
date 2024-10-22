@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:paddingHorizontal="@dimen/container_padding_horizontal">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:scrollbars="none"
+        android:paddingHorizontal="@dimen/container_padding_horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/container_padding_horizontal">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logoumsida"
+        android:adjustViewBounds="true"/>
+
+    <TextView
+        style="@style/label"
+        android:text="Masukan Nama"
+        android:layout_marginTop="@dimen/margin_top_first_element"/>
+
+    <EditText
+        android:id="@+id/edt_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:minWidth="48dp"
+        android:hint="Nama anda"
+        android:inputType="text"/>
+
+    <TextView
+        style="@style/label"
+        android:text="Hobi kamu"
+        android:layout_marginTop="@dimen/margin_top_element"/>
+
+    <CheckBox
+        android:id="@+id/cb_mancing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:text="Mancing"/>
+
+    <CheckBox
+        android:id="@+id/cb_ngoding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:text="Ngoding"/>
+
+    <CheckBox
+        android:id="@+id/cb_rebahan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:text="Rebahan"/>
+
+    <TextView
+        style="@style/label"
+        android:text="Udah makan belum?"
+        android:layout_marginTop="@dimen/margin_top_element"/>
+
+    <ToggleButton
+        android:id="@+id/tg_makan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOff="Belum"
+        android:textOn="Sudah"/>
+
+    <TextView
+        style="@style/label"
+        android:text="Masih jomblo?"
+        android:layout_marginTop="@dimen/margin_top_element"/>
+
+    <Switch
+        android:id="@+id/sw_is_jomblo"
+        android:layout_width="wrap_content"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btn_submit"
+            style="@style/button"
+            android:text="Submit"/>
+
+        <View
+            style="@style/divider"/>
+
+        <TextView
+            android:id="@+id/txt_result"
+            style="@style/label"/>
+
+    </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
